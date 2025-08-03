@@ -159,7 +159,7 @@ int main()
 
     cout<<""<<endl;
     cout<<"To convert currency again, press 1"<<endl;
-    cout<<"Exit..? Press 0: "<<endl;
+    cout<<"Exit..? Press 0"<<endl;
     cin>>Again;
 
     if (Again == 1)
@@ -182,3 +182,4 @@ int main()
     return 0;
 
 }
+
