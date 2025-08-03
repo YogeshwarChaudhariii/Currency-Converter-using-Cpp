@@ -164,11 +164,19 @@ int main()
 
     if (Again == 1)
     {
-        cout<<"Enter your choice: "<<endl;
-        cin>>Choice;
-        cout<<"Your choice is: "<<Choice<<endl;
-        cout<<""<<endl;
-        cobj.ChangeCurrency(Choice);
+        while(Again == 1)
+        {
+            cout<<"Enter your choice: "<<endl;
+            cin>>Choice;
+            cout<<"Your choice is: "<<Choice<<endl;
+            cout<<""<<endl;
+            cobj.ChangeCurrency(Choice);
+
+            cout<<""<<endl;
+            cout<<"To convert currency again, press 1"<<endl;
+            cout<<"Exit..? Press 0"<<endl;
+            cin>>Again;
+        }
     }
     else if (Again == 0)
     {
@@ -182,4 +190,5 @@ int main()
     return 0;
 
 }
+
 
