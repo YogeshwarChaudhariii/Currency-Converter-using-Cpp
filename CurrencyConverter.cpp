@@ -170,6 +170,7 @@ int main()
             cin>>Choice;
             cout<<"Your choice is: "<<Choice<<endl;
             cout<<""<<endl;
+
             cobj.ChangeCurrency(Choice);
 
             cout<<""<<endl;
@@ -177,18 +178,19 @@ int main()
             cout<<"Exit..? Press 0"<<endl;
             cin>>Again;
         }
-    }
-    else if (Again == 0)
-    {
-        exit(EXIT_SUCCESS);
-    }
-    else
-    {
-        cout<<"Unable to proceed...!"<<endl;
+        if (Again == 0)
+        {
+            exit(EXIT_SUCCESS);
+        }
+        else
+        {
+            cout << "Unable to proceed...!" << endl;
+        }
     }
 
     return 0;
 
 }
+
 
 
