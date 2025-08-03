@@ -123,7 +123,10 @@ class Currency
 int main()
 {
     Currency cobj;
+    
     int Choice = 0;
+    int Again = 0;
+    
     cout<<"|----------------------------------------------------------------------|"<<endl;
     cout<<"|----------- Welcome to Currency Converter into Indian Rupee ----------|"<<endl;
     cout<<"|----------------------------------------------------------------------|"<<endl;
@@ -147,12 +150,35 @@ int main()
     cout<<"|  15. Convert curreny into Pakistan                                   |"<<endl;
     cout<<"|----------------------------------------------------------------------|"<<endl;
 
-    cout<<"|  Enter your choice:                                                  |"<<endl;
+    cout<<"Enter your choice: "<<endl;
     cin>>Choice;
     cout<<"Your choice is: "<<Choice<<endl;
-    cout<<"|----------------------------------------------------------------------|"<<endl;
+    cout<<""<<endl;
 
     cobj.ChangeCurrency(Choice);
 
+    cout<<""<<endl;
+    cout<<"To convert currency again, press 1"<<endl;
+    cout<<"Exit..? Press 0: "<<endl;
+    cin>>Again;
+
+    if (Again == 1)
+    {
+        cout<<"Enter your choice: "<<endl;
+        cin>>Choice;
+        cout<<"Your choice is: "<<Choice<<endl;
+        cout<<""<<endl;
+        cobj.ChangeCurrency(Choice);
+    }
+    else if (Again == 0)
+    {
+        exit(EXIT_SUCCESS);
+    }
+    else
+    {
+        cout<<"Unable to proceed...!"<<endl;
+    }
+
     return 0;
+
 }
